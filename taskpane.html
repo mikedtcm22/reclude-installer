@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reclude for Excel</title><meta name="description" content="Anonymize and restore sensitive text in Excel workbooks with local deterministic mappings"><script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script><meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://appsforoffice.microsoft.com https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https: wss:; "><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"><style>body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #0F1A2E 0%, #162947 100%);
+            color: #E2E8F0;
+        }
+        
+        #loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        
+        .loading-spinner {
+            border: 3px solid rgba(226, 232, 240, 0.25);
+            border-top: 3px solid #2563EB;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #BFDBFE;
+        }
+        
+        #root {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }</style><script>window.addEventListener('error', function (event) {
+            var loadingText = document.querySelector('#loading .loading-text');
+            if (loadingText && event && event.message) {
+                loadingText.textContent = 'Startup error: ' + event.message;
+            }
+        });
+        window.addEventListener('unhandledrejection', function () {
+            var loadingText = document.querySelector('#loading .loading-text');
+            if (loadingText) {
+                loadingText.textContent = 'Startup error: unhandled async exception.';
+            }
+        });</script><script defer="defer" src="vendors.042929ca7a01d5216c88.js"></script><script defer="defer" src="taskpane.08ee9bd54fefe8da2ea7.js"></script></head><body><div id="loading"><div class="loading-spinner"></div><div class="loading-text">Loading Reclude...</div></div><div id="root"></div></body></html>
