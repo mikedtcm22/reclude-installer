@@ -3,37 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reclude for Excel - Install</title>
+  <title>Reclude Downloads</title>
   <style>
-    body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; background: linear-gradient(180deg, #0F1A2E 0%, #162947 100%); color: #1f2937; }
-    .wrap { max-width: 760px; margin: 36px auto; padding: 0 16px; }
-    .card { background: #fff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; box-shadow: 0 4px 16px rgba(15,26,46,0.25); }
-    h1 { margin-top: 0; font-size: 24px; }
-    p, li { line-height: 1.5; }
-    .btn { display: inline-block; margin-top: 8px; background: #2563EB; color: #fff; padding: 10px 14px; border-radius: 8px; text-decoration: none; font-weight: 600; }
-    .btn-secondary { margin-left: 8px; background: #0D9488; }
-    code { background: #f3f4f6; padding: 2px 5px; border-radius: 4px; }
-    ol { padding-left: 20px; }
-    .muted { color: #6b7280; font-size: 13px; }
-    .warn { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 10px; font-size: 13px; }
+    body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; background: linear-gradient(180deg, #0F1A2E 0%, #162947 100%); color: #0f172a; }
+    .wrap { max-width: 920px; margin: 36px auto; padding: 0 16px; }
+    .card { background: #fff; border: 1px solid #bfdbfe; border-radius: 16px; padding: 24px; box-shadow: 0 10px 28px rgba(15,26,46,0.25); }
+    h1 { margin: 0 0 10px; font-size: 28px; }
+    h2 { margin: 0 0 12px; font-size: 22px; }
+    h3 { margin: 0 0 10px; font-size: 18px; }
+    p, li { line-height: 1.55; }
+    .intro { margin: 0 0 24px; color: #334155; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+    .panel { border: 1px solid #dbeafe; border-radius: 14px; padding: 18px; background: #f8fbff; }
+    .btn { display: inline-block; margin: 10px 0 14px; background: #2563EB; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none; font-weight: 700; }
+    .btn-windows { background: #0D9488; }
+    code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; }
+    ol { padding-left: 20px; margin: 0; }
+    .note { margin-top: 18px; border-radius: 12px; background: #fffbeb; border: 1px solid #fcd34d; padding: 12px 14px; font-size: 14px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>Install Reclude for Excel</h1>
-      <p>Private beta installer for Excel Desktop on macOS.</p>
-      <a class="btn" href="https://mikedtcm22.github.io/reclude-installer/Reclude-for-Excel-Installer.pkg">Download Reclude for Excel (.pkg)</a>
-      <a class="btn btn-secondary" href="./manifest.xml" download>Download manifest (advanced)</a>
-      <h2>Install Steps</h2>
-      <ol>
-        <li>Download the <code>.pkg</code> installer from this page.</li>
-        <li>Open the package and complete the install flow.</li>
-        <li>Open Excel Desktop.</li>
-        <li>Open <code>Add-ins</code> and launch <code>Reclude</code>.</li>
-      </ol>
-      <p class="warn"><strong>Unsigned beta note:</strong> If macOS blocks opening the installer, use Finder right-click on the package and choose <code>Open</code> once.</p>
-      <p class="muted">Hosted base URL: https://mikedtcm22.github.io/reclude-installer</p>
+      <h1>Reclude Downloads</h1>
+      <p class="intro">Choose the installer for your computer, then follow the steps below that download link.</p>
+      <div class="grid">
+        <section class="panel">
+          <h2>macOS</h2>
+          <a class="btn" href="https://mikedtcm22.github.io/reclude-installer/Reclude-for-Excel-Installer.pkg">Download Mac Installer (.pkg)</a>
+          <h3>Install Steps</h3>
+          <ol>
+            <li>Download the <code>.pkg</code> file.</li>
+            <li>Open it. If macOS blocks it, Finder right-click the file and choose <code>Open</code>.</li>
+            <li>If macOS still blocks it, go to <code>System Settings &gt; Privacy &amp; Security</code> and allow it to open.</li>
+            <li>After install, fully quit and reopen Excel, then launch <code>Reclude</code> from <code>Add-ins</code>.</li>
+          </ol>
+        </section>
+        <section class="panel">
+          <h2>Windows</h2>
+          <a class="btn btn-windows" href="https://mikedtcm22.github.io/reclude-installer-windows-test/Reclude-for-Excel-Windows-Installer.exe">Download Windows Installer (.exe)</a>
+          <h3>Install Steps</h3>
+          <ol>
+            <li>Download the <code>.exe</code> file.</li>
+            <li>If Windows shows a protection warning, click <code>More info</code> and then <code>Run anyway</code>.</li>
+            <li>Complete the installer, then fully quit and reopen Excel.</li>
+            <li>Open <code>Add-ins</code> and launch <code>Reclude</code>.</li>
+          </ol>
+        </section>
+      </div>
+      <div class="note">
+        These are beta installers. If Reclude does not appear immediately after installation, fully restart Excel once and try again.
+      </div>
     </div>
   </div>
 </body>
