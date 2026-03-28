@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+           xsi:type="TaskPaneApp">
+  <Id>F72D0EFA-79B8-4577-8C01-2509E604D500</Id>
+  <Version>1.2.0.0</Version>
+  <ProviderName>Reclude</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Reclude"/>
+  <Description DefaultValue="Anonymize and restore sensitive text in Excel workbooks."/>
+  <IconUrl DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/assets/ribbon-icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/assets/ribbon-icon-80.png"/>
+  <SupportUrl DefaultValue="https://github.com/mikedtcm22/excel_anon"/>
+
+  <AppDomains>
+    <AppDomain>https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <Runtimes>
+          <Runtime resid="Taskpane.Url" lifetime="long"/>
+        </Runtimes>
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+
+          <FunctionFile resid="Taskpane.Url"/>
+
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="Reclude.Group">
+                <Label resid="Reclude.GroupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Control xsi:type="Button" id="Reclude.TaskpaneButton">
+                  <Label resid="Reclude.TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="Reclude.TaskpaneButton.Label"/>
+                    <Description resid="Reclude.TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+
+          <ExtensionPoint xsi:type="ContextMenu">
+            <OfficeMenu id="ContextMenuCell">
+              <Control xsi:type="Button" id="Reclude.ContextTagRangeButton">
+                <Label resid="TagRangeCmd.Label"/>
+                <Supertip>
+                  <Title resid="TagRangeCmd.Label"/>
+                  <Description resid="TagRangeCmd.Tooltip"/>
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>recludeTagRangeCommand</FunctionName>
+                </Action>
+              </Control>
+            </OfficeMenu>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/assets/ribbon-icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/assets/ribbon-icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/assets/ribbon-icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/mikedtcm22/excel_anon"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GetStarted.Title" DefaultValue="Get started with Reclude"/>
+        <bt:String id="Reclude.GroupLabel" DefaultValue="Reclude"/>
+        <bt:String id="Reclude.TaskpaneButton.Label" DefaultValue="Open Reclude"/>
+        <bt:String id="TagRangeCmd.Label" DefaultValue="Reclude: Tag Range"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="Open Reclude to anonymize workbook text before sharing with AI tools."/>
+        <bt:String id="Reclude.TaskpaneButton.Tooltip" DefaultValue="Open Reclude task pane"/>
+        <bt:String id="TagRangeCmd.Tooltip" DefaultValue="Open Reclude and tag the current selection"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <ExtendedOverrides Url="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/assets/shortcuts.json"/>
+</OfficeApp>

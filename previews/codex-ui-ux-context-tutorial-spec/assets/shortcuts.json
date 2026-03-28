@@ -1,0 +1,17 @@
+{
+  "actions": [
+    {
+      "id": "recludeTagRangeShortcutCommand",
+      "type": "ExecuteFunction",
+      "name": "Open Reclude tag range"
+    }
+  ],
+  "shortcuts": [
+    {
+      "action": "recludeTagRangeShortcutCommand",
+      "key": {
+        "default": "Ctrl+Alt+R"
+      }
+    }
+  ]
+}
