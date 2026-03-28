@@ -10,8 +10,10 @@ export type LicenseStatus = 'ACTIVE_TRIAL' | 'ACTIVE_PAID' | 'INACTIVE';
 export interface TaggedRange {
     id: string;
     address: string;
+    selectionAddress?: string;
     designation: TagDesignation;
     customDesignation?: string;
+    hasHeaders?: boolean;
 }
 export interface EdgeCaseScanConfig {
     searchBlockText: boolean;

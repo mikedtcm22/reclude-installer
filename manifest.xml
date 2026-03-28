@@ -5,7 +5,7 @@
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>F72D0EFA-79B8-4577-8C01-2509E604D500</Id>
-  <Version>1.1.1.0</Version>
+  <Version>1.2.0.0</Version>
   <ProviderName>Reclude</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Reclude"/>
@@ -14,23 +14,26 @@
   <HighResolutionIconUrl DefaultValue="https://mikedtcm22.github.io/reclude-installer/assets/ribbon-icon-80.png"/>
   <SupportUrl DefaultValue="https://github.com/mikedtcm22/excel_anon"/>
 
+  <AppDomains>
+    <AppDomain>https://mikedtcm22.github.io/reclude-installer</AppDomain>
+  </AppDomains>
+
   <Hosts>
     <Host Name="Workbook"/>
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html"/>
+    <SourceLocation DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html?channel=stable&manifestVersion=1.0.0&installerVersion=1.0.0"/>
   </DefaultSettings>
-
-  <AppDomains>
-    <AppDomain>https://mikedtcm22.github.io/reclude-installer</AppDomain>
-  </AppDomains>
 
   <Permissions>ReadWriteDocument</Permissions>
 
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
       <Host xsi:type="Workbook">
+        <Runtimes>
+          <Runtime resid="Taskpane.Url" lifetime="long"/>
+        </Runtimes>
         <DesktopFormFactor>
           <GetStarted>
             <Title resid="GetStarted.Title"/>
@@ -38,7 +41,7 @@
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
 
-          <FunctionFile resid="Commands.Url"/>
+          <FunctionFile resid="Taskpane.Url"/>
 
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
@@ -68,6 +71,26 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
+
+          <ExtensionPoint xsi:type="ContextMenu">
+            <OfficeMenu id="ContextMenuCell">
+              <Control xsi:type="Button" id="Reclude.ContextTagRangeButton">
+                <Label resid="TagRangeCmd.Label"/>
+                <Supertip>
+                  <Title resid="TagRangeCmd.Label"/>
+                  <Description resid="TagRangeCmd.Tooltip"/>
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>recludeTagRangeCommand</FunctionName>
+                </Action>
+              </Control>
+            </OfficeMenu>
+          </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
     </Hosts>
@@ -80,18 +103,20 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/mikedtcm22/excel_anon"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html?channel=stable&manifestVersion=1.0.0&installerVersion=1.0.0"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with Reclude"/>
         <bt:String id="Reclude.GroupLabel" DefaultValue="Reclude"/>
         <bt:String id="Reclude.TaskpaneButton.Label" DefaultValue="Open Reclude"/>
+        <bt:String id="TagRangeCmd.Label" DefaultValue="Reclude: Tag Range"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Open Reclude to anonymize workbook text before sharing with AI tools."/>
         <bt:String id="Reclude.TaskpaneButton.Tooltip" DefaultValue="Open Reclude task pane"/>
+        <bt:String id="TagRangeCmd.Tooltip" DefaultValue="Open Reclude and tag the current selection"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
+  <ExtendedOverrides Url="https://mikedtcm22.github.io/reclude-installer/assets/shortcuts.json"/>
 </OfficeApp>

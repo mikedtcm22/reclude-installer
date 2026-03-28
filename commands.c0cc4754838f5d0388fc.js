@@ -1,2 +1,0 @@
-(()=>{"use strict";(()=>{const i=globalThis.Office;i?"function"!=typeof i.onReady?i.initialize=()=>{}:i.onReady(()=>{}):console.error("Office runtime unavailable; commands cannot initialize.")})()})();
-//# sourceMappingURL=commands.c0cc4754838f5d0388fc.js.map
