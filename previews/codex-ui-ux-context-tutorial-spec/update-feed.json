@@ -1,0 +1,20 @@
+{
+  "channel": "preview",
+  "publishedAt": "2026-03-28T20:06:27.909Z",
+  "latestWebVersion": "1.0.0",
+  "latestManifestVersion": "1.0.0",
+  "latestInstallerVersion": "1.0.0",
+  "minimumSupportedManifestVersion": "1.0.0",
+  "minimumSupportedInstallerVersion": "1.0.0",
+  "recommendedUpdate": false,
+  "requiredUpdate": false,
+  "downloads": {
+    "mac": {
+      "url": "https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/Reclude-for-Excel-Installer.pkg"
+    },
+    "windows": {
+      "url": "https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/Reclude-for-Excel-Windows-Installer.exe"
+    }
+  },
+  "minimumAppBehaviorVersion": "1.0.0"
+}

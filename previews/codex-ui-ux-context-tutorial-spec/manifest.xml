@@ -23,7 +23,7 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/taskpane.html"/>
+    <SourceLocation DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/taskpane.html?channel=preview&manifestVersion=1.0.0&installerVersion=1.0.0"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -103,7 +103,7 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/mikedtcm22/excel_anon"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/previews/codex-ui-ux-context-tutorial-spec/taskpane.html?channel=preview&manifestVersion=1.0.0&installerVersion=1.0.0"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with Reclude"/>
