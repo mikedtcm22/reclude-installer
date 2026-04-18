@@ -28,6 +28,8 @@ export interface InstalledVersionInfo {
     channel: ReleaseChannel;
     isDevelopmentBuild: boolean;
     feedUrl: string | null;
+    licenseApiBaseUrl: string;
+    supportEmail: string;
 }
 export type UpdateAvailability = 'disabled' | 'idle' | 'checking' | 'up-to-date' | 'recommended' | 'required' | 'error';
 export interface CachedUpdateCheck {

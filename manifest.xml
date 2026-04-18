@@ -23,7 +23,7 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html?channel=stable&amp;manifestVersion=1.0.0&amp;installerVersion=1.0.0"/>
+    <SourceLocation DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html?channel=stable&amp;manifestVersion=1.0.0&amp;installerVersion=1.0.0&amp;licenseApiBaseUrl=https%3A%2F%2Fgbewxqwduetspfdfzsgx.supabase.co%2Ffunctions%2Fv1&amp;supportEmail=support%40reclude.io"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -103,7 +103,7 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/mikedtcm22/excel_anon"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html?channel=stable&amp;manifestVersion=1.0.0&amp;installerVersion=1.0.0"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://mikedtcm22.github.io/reclude-installer/taskpane.html?channel=stable&amp;manifestVersion=1.0.0&amp;installerVersion=1.0.0&amp;licenseApiBaseUrl=https%3A%2F%2Fgbewxqwduetspfdfzsgx.supabase.co%2Ffunctions%2Fv1&amp;supportEmail=support%40reclude.io"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with Reclude"/>

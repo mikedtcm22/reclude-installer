@@ -6,7 +6,7 @@ export type ProtectedSheetBehavior = 'ask' | 'skip' | 'cancel';
 export type TagDesignation = 'Customer' | 'Vendor' | 'Employee' | 'Custom';
 export type EdgeCaseMatchType = 'block-text' | 'formula-string';
 export type EdgeCaseDecision = 'yes' | 'no' | 'yes-all' | 'no-all' | 'cancel';
-export type LicenseStatus = 'ACTIVE_TRIAL' | 'ACTIVE_PAID' | 'INACTIVE';
+export type LicenseStatus = 'ACTIVE_TRIAL' | 'ACTIVE' | 'ACTIVE_PAID' | 'INACTIVE';
 export interface TaggedRange {
     id: string;
     address: string;
